@@ -1,0 +1,22 @@
+body
+{
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+
+#btn_inscrire
+{
+    margin-top: 20%;
+    margin-bottom: 50px;
+}
+
+
+#btn_gerer, #btn_inscrire
+{
+    background-color: #C8C397;
+    border:#B6A991 solid 6px;
+    width: 75%;
+    font-weight: bold;
+
+}
+

@@ -1,0 +1,109 @@
+/******************* HEADER *******************/
+
+header 
+{
+    height: 130px;
+    margin: 0;
+    background : #DACFB7;
+}
+
+
+/* Lien de retour à la page d'accueil */
+a:link 
+{
+  text-decoration: none;     
+}
+
+p
+{
+    color:#8B8986;
+    margin-left:10px;
+}
+
+
+/* Titre de la page*/
+h1
+{
+    text-align: center;
+}
+
+
+
+/******************* TALEAU QUI LISTE LES CLIENTS *******************/
+/* Ossature du tableau*/
+.tableau-style
+{
+    margin:auto;
+    text-align:center;
+    border-collapse: collapse;
+    border-collapse: collapse;
+    width:50%;
+    box-shadow:0 5px 50px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: 1px solid #ddd;
+    float: left;
+    margin-left:10px;
+}
+
+/* En-tête du tableau */
+thead tr
+{
+    background-color: #8B8986;
+    color:white;
+}
+
+/* Contenu du tableau */
+table,td
+{
+    border:1px solid black;
+}
+
+    td
+    {
+        padding:3px;
+    }
+
+/* Lignes de l'en-tête et du contenu */
+th, td
+{
+    padding: 15px 20px;
+}
+
+
+/******************* FORMULAIRE DE MODIFICATION D'UN CLIENT *******************/
+form
+{
+    display:flex;
+    float: right;
+    flex-direction:column;
+    width:45%;
+    margin-top:40px;
+    margin-right:10px;
+}
+
+/* Label + input */
+.form-group
+{
+    width: 100%;
+}
+
+/* Input */
+input[type=text], input[type=email]
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}  
+
+/* Bouton de validation de la modification*/
+#btn_modifier
+{
+    width: 100%;
+    background-color:#8B8986;
+    border-color: #8B8986;
+    font-weight: bold;
+}
