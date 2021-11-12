@@ -10,13 +10,21 @@ $bddPDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //Instanciation d'un nouvel objet manager
 $manager = new UtilisateursManager($bddPDO);
 
-
+/*
+Si on récupère le paramètre modifier via l'URL on fait appel à la méthode GetUtilisateur
+-> on récupère les informations relatives à l'utilisateur
+*/
 if(isset($_GET['modifier']))
 {
     $utilisateur = $manager->getUtilisateur((int) $_GET['modifier']);
 }
 
-
+/*
+Si le nom est rempli, on crée un objet 'utilisateur' sous forme de tableau
++ si l'ID est récupérer on appel le setter de l'ID pour le mettre à jour
++ si l'utilisateur est valide l'objet manager sera mis à jour
+    -> le message de confirmation de modification s'affichera
+*/
 if(isset($_POST['nom']))
 {
     $utilisateur = new Utilisateurs
@@ -98,13 +106,13 @@ if(isset($_GET['supprimer']))
         <form action="gestion.php" method="post">
             <div class="form-group">
                 <?php if(isset($erreur) && in_array(Utilisateurs:: NOM_INVALIDE, $erreur)) 
-                echo'Le nom est invalide<br>'?>
+                echo'<p style="color:red;">Le nom est invalide</p><br>'?>
                 <label for="nom">Nom</label><br>
                 <input type="text" name="nom" value="<?php if(isset($utilisateur))echo $utilisateur->getNom();?>">
             </div>
             <div class="form-group">
                 <?php if(isset($erreur) && in_array(Utilisateurs:: PRENOM_INVALIDE, $erreur)) 
-                echo'Le prénom est invalide<br>'?>
+                echo'<p style="color:red;">Le prénom est invalide</p><br>'?>
                 <label for="prenom">Prénom</label><br>
                 <input type="text" name="prenom" value="<?php if(isset($utilisateur))echo $utilisateur->getPrenom();?>">
             </div>
@@ -114,7 +122,7 @@ if(isset($_GET['supprimer']))
             </div>
             <div class="form-group">
                 <?php if(isset($erreur) && in_array(Utilisateurs:: MAIL_INVALIDE, $erreur)) 
-                echo'L\'adresse email est invalide<br>'?>
+                echo'<p style="color:red;">L\'adresse email est invalide</p><br>'?>
                 <label for="mail">Email</label><br>
                 <input type="text" name="mail" value="<?php if(isset($utilisateur))echo $utilisateur->getMail();?>">
             </div>

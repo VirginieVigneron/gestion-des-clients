@@ -1,42 +1,65 @@
-#img_inscription
+/******************* HEADER *******************/
+
+header 
 {
-    float: right;
-    margin-top:-10px;
-    margin-right:-10px;
-    width:45%;
+    height: 130px;
+    margin: 0;
+    background : #DACFB7;
 }
 
-html 
-{ 
-    overflow-y: hidden; 
-} 
 
+/* Lien de retour à la page d'accueil */
+a:link 
+{
+  text-decoration: none;     
+}
+
+p
+{
+    color:#8B8986;
+    margin-left:10px;
+}
+
+/* Titre de la page*/
+h1
+{
+    text-align: center;
+}
+
+/******************* FORMULAIRE DE MODIFICATION D'UN CLIENT *******************/
+form
+{
+
+    width:45%;
+    margin-top:40px;
+    margin-right:10px;
+}
+
+/* Label + input */
+.form-group
+{
+    width: 100%;
+}
+
+/* Input */
 input[type=text], input[type=email]
 {
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}  
 
-  .form-group
-  {
-      margin-left: 3%;
-  }
+/* Bouton de validation de l'ajout*/
+#btn_ajouter
+{
+    width: 100%;
+    background-color:#8B8986;
+    border-color: #8B8986;
+    font-weight: bold;
+}
 
-  h1{
-      text-align: center;
-     padding-top: 15px;
-     padding-bottom:30px;
-  }
-
-
-  .btn_enr
-  {
-      display: flex;
-      justify-content: center;
-  }
 
